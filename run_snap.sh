@@ -22,7 +22,7 @@ done
 DOCKER_COMMAND="$DOCKER_COMMAND pipeline-database set local &&
 pipeline-run-pair LatticeConstantCubicEnergy_bcc_$1* SNAP_Alchemy__MO_000000000000_000 &&
 pipeline-run-pair LatticeConstantCubicEnergy_fcc_$1* SNAP_Alchemy__MO_000000000000_000 &&
-kimitems remove -f LatticeConstant.* &&
+kimitems remove -f LatticeConstantCubicEnergy.* &&
 pipeline-run-matches SNAP_Alchemy__MO_000000000000_000 &&
 find /home/openkim/test-results/ -name results.edn | xargs cat >> /home/openkim/kim_tmp/results.edn"
 
